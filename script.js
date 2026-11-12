@@ -46,3 +46,52 @@ if (signupForm) {
         }
     });
 }
+// Dynamic Password Rules
+
+const passwordInput = document.getElementById("signupPassword");
+const rulesContainer = document.getElementById("passwordRules");
+
+const passwordRules = [
+    {
+        text: "At least 6 characters",
+        check: password => password.length >= 6
+    },
+    {
+        text: "Contains letters",
+        check: password => /[a-zA-Z]/.test(password)
+    },
+    {
+        text: "Contains numbers",
+        check: password => /[0-9]/.test(password)
+    }
+];
+
+if (passwordInput && rulesContainer) {
+
+    let ruleElements = [];
+
+    for (let i = 0; i < passwordRules.length; i++) {
+        let rule = document.createElement("p");
+        rule.textContent = "✗ " + passwordRules[i].text;
+
+        rulesContainer.appendChild(rule);
+        ruleElements.push(rule);
+    }
+
+    passwordInput.addEventListener("input", function() {
+
+        let password = passwordInput.value;
+
+        for (let i = 0; i < passwordRules.length; i++) {
+
+            if (passwordRules[i].check(password)) {
+                ruleElements[i].textContent =
+                    "✓ " + passwordRules[i].text;
+            } else {
+                ruleElements[i].textContent =
+                    "✗ " + passwordRules[i].text;
+            }
+
+        }
+    });
+}
