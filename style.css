@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f6fc;
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+
+header {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px gray;
+}
+
+header h1 {
+    color: #6b5b95;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6b5b95;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b39ddb;
+}
+
+h1 {
+    color: #6b5b95;
+    text-align: center;
+}
+
+h2 {
+    color: #6b5b95;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px;
+    background-color: #eee8f7;
+}
+
+.hero p {
+    color: #555;
+    font-size: 17px;
+}
+
+.hero img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: white;
+    display: inline-block;
+    width: 220px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+}
+
+.card h3 {
+    color: #8064a2;
+}
+
+.about-hero {
+    text-align: center;
+    padding: 30px;
+    background-color: #eee8f7;
+}
+
+.about-hero img {
+    border-radius: 10px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-content article {
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+}
+
+.about-content ul {
+    display: inline-block;
+    text-align: left;
+}
+
+form {
+    background-color: white;
+    width: 350px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #ccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #6b5b95;
+    font-weight: bold;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #8064a2;
+}
+
+button {
+    background-color: #8064a2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5e477d;
+}
+
+body > p {
+    text-align: center;
+}
+
+body > img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+#timeGreeting {
+    color: #8064a2;
+    font-weight: bold;
+}
+
+#studyMessage {
+    color: #6b5b95;
+}
+
+#passwordRules {
+    color: #8064a2;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #8064a2;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #6b5b95;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
