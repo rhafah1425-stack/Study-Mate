@@ -7,54 +7,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>StudyMate</h1>
-<h2>Welcome Back!</h2>
-<p>Login to organize your study tasks.</p>
-<p id="timeGreeting"></p>
-<img id="studyImage"
-src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400"
-alt="Study Image"
-width="300">
-<br>
-<button onclick="changeImage()">Change Picture</button>
+    <h1>StudyMate</h1>
+    <h2>Welcome Back!</h2>
+    <p>Login to organize your study tasks.</p>
+    
+    <p id="timeGreeting"></p>
 
-<form id="loginForm">
-
-    <label>Email:</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
-
+    <img id="studyImage" src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400" alt="Study Image" width="300">
+    <br>
+    <button type="button" onclick="changeImage()">Change Picture</button>
     <br><br>
 
-    <label>Password:</label>
-    <input type="password" id="password" placeholder="Enter your password" required>
-
+    <p id="studyMessage">Ready to organize your study tasks?</p>
+    <button type="button" onclick="changeText()">Click Here</button>
     <br><br>
 
-    <button type="submit">Login</button>
+    <form id="loginForm">
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <br><br>
 
-</form>
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <br><br>
 
-<p>Don't have an account?
-    <a href="signup.html">Sign Up</a>
-</p>
-<script>
-    let hour = new Date().getHours();
-    let message;
+        <button type="submit">Login</button>
+    </form>
 
-    if (hour < 12) {
-        message = "Good Morning!";
-    } else if (hour < 18) {
-        message = "Good Afternoon!";
-    } else {
-        message = "Good Evening!";
-    }
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
 
-    document.getElementById("timeGreeting").textContent = message;
-    function changeImage() {
-    document.getElementById("studyImage").src =
-    "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400";
-}
-</script>
-<script src="js/script.js"></script>
+    <script>
+        const hours = new Date().getHours();
+        let message = "Welcome!";
+        if (hours < 12) {
+            message = "Good Morning!";
+        } else if (hours < 18) {
+            message = "Good Afternoon!";
+        } else {
+            message = "Good Evening!";
+        }
+        document.getElementById("timeGreeting").textContent = message;
+
+        function changeImage() {
+            document.getElementById("studyImage").src = "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400";
+        }
+
+        function changeText() {
+            document.getElementById("studyMessage").textContent = "Great job! Keep learning with StudyMate!";
+        }
+    </script>
 </body>
 </html>
